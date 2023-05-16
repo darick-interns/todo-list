@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Todo List</title>
+    <title>Vite App</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <form method="POST" action="http://localhost:6969/todo">
-      <div>
-        <input type="text" name="task" placeholder="Enter task">
-      </div>
-    </form>
-    <h3>Todo:</h3>
-    <ul id="todo-list"></ul>
-    <script type="module" src="/main.js"></script> 
+  <body> 
+    <div class = "container">
+      <form method="POST" action="http://localhost:6969/todo" >
+        <input type="text" name="task_name" placeholder="Add tasks">
+      </form>
+      <h3>Todo:</h3>
+      <ul id = "todo-list"></ul>   
+    </div>
+    <div class = "filter-btn">
+      <button id = "filter-all-tasks">All</button>
+      <button id = "filter-active-tasks">Active</button>
+      <button id = "filter-completed-tasks">Completed</button> 
+      <form action="http://localhost:6969/logout">
+        <button>Logout</button>
+      </form>
+    </div>
+    <script type="module" src="/main.js"></script>
+    
   </body>
 </html>
